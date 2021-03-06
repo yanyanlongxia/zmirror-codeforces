@@ -36,7 +36,7 @@ external_domains = (
     'www.codeforces.com',
 )
 
-# 强制所有 duckduckgo 站点使用HTTPS
+# 强制所有 codeforces 站点使用HTTPS
 force_https_domains = 'ALL'
 
 # 自动动态添加域名
