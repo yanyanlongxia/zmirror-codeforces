@@ -62,6 +62,25 @@ def custom_response_text_rewriter(raw_text, content_mime, remote_url):
     # Example: remove google analytics
     raw_text = raw_text.replace('www.google-analytics.com/analytics.js', '')
 
+    raw_text = raw_text.replace('connect.facebook.net', '0.0.0.0')
+
+    raw_text = raw_text.replace('platform.twitter.com', '0.0.0.0')
+
+    raw_text = raw_text.replace('//fonts.googleapis.com', '//fonts.geekzu.org')
+
+    raw_text = raw_text.replace('//fonts.gstatic.com/', '//gapis.geekzu.org/g-fonts/')
+
+    raw_text = raw_text.replace('Codeforces</title>', 'Codeforces(Unofficial mirror by yylx)</title>')
+
+    raw_text = raw_text.replace('<li class=""><a href="/help">Help</a></li>',
+                                '<li class=""><a href="/help">Help</a></li>\n<li class=""><a href="https://yylx.tech/codeforceslive" target="_blank">About</a></li>\n<li class=""><a href="https://yylx.tech/donate-me" target="_blank">Donate</a></li>')
+
+    raw_text = raw_text.replace('The only programming contests Web 2.0 platform',
+                                'The programming contests Web 2.0 platform mirror')
+
+    raw_text = raw_text.replace('Copyright 2010-2021 Mike Mirzayanov</div>',
+                                'Copyright 2010-2021 Mike Mirzayanov</div>\n<div>Mirror by <a href="https://yylx.tech/" target="_blank">yanyanlongxia</a></div>')
+
     # Example: Add your own analytics codes
     if content_mime == 'text/html':
         # Your statistic code
