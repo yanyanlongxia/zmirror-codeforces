@@ -19,7 +19,7 @@ my_host_scheme = 'http://'
 my_host_port = None  # None表示使用默认端口, 可以设置成非标准端口, 比如 81
 
 # ############## Target Domain Settings ##############
-target_domain = 'codeforces.com'
+target_domain = 'm2.codeforces.com'
 target_scheme = 'https://'
 
 # 这里面大部分域名都是通过 `enable_automatic_domains_whitelist` 自动采集的, 我只是把它们复制黏贴到了这里
