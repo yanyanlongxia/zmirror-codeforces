@@ -60,8 +60,12 @@ def custom_response_text_rewriter(raw_text, content_mime, remote_url):
         raw_text = demo__google_result_open_in_new_tab(raw_text, content_mime)
 
     # Example: remove google analytics
-    raw_text = raw_text.replace('www.google-analytics.com/analytics.js', '')
+    raw_text = raw_text.replace("<script>\n        (function(d, s, id) {\n            var js, fjs = d.getElementsByTagName(s)[0];\n            if (d.getElementById(id)) return;\n            js = d.createElement(s); js.id = id;\n            js.src = \"//connect.facebook.net/en_EN/all.js#appId=554666954583323&xfbml=1\";\n            fjs.parentNode.insertBefore(js, fjs);\n        }(document, 'script', 'facebook-jssdk'));\n        </script>","")
+    
+    raw_text = raw_text.replace("<script type=\"text/javascript\">\n    window.fbAsyncInit = function() {\n        FB.init({\n            appId      : '554666954583323',\n            xfbml      : true,\n            version    : 'v2.8'\n        });\n        FB.AppEvents.logPageView();\n    };\n\n    (function(d, s, id){\n        var js, fjs = d.getElementsByTagName(s)[0];\n        if (d.getElementById(id)) {return;}\n        js = d.createElement(s); js.id = id;\n        js.src = \"//connect.facebook.net/en_US/sdk.js\";\n        fjs.parentNode.insertBefore(js, fjs);\n    }(document, 'script', 'facebook-jssdk'));\n</script>","")
 
+    raw_text = raw_text.replace('<script type="text/javascript">\n  var _gaq = _gaq || [];\n  _gaq.push([\'_setAccount\', \'UA-743380-5\']);\n  _gaq.push([\'_trackPageview\']);\n\n  (function () {\n    var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;\n    ga.src = (document.location.protocol == \'https:\' ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';\n    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);\n  })();\n</script>','')
+    
     raw_text = raw_text.replace('connect.facebook.net', '0.0.0.0')
 
     raw_text = raw_text.replace('platform.twitter.com', '0.0.0.0')
