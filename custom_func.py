@@ -85,13 +85,8 @@ def custom_response_text_rewriter(raw_text, content_mime, remote_url):
     raw_text = raw_text.replace('Copyright 2010-2021 Mike Mirzayanov</div>',
                                 'Copyright 2010-2021 Mike Mirzayanov</div>\n<div>Mirror by <a href="https://yylx.tech/" target="_blank">yanyanlongxia</a></div>')
 
-    # Example: Add your own analytics codes
-    if content_mime == 'text/html':
-        # Your statistic code
-        my_statistic_code = r"""<!--Your Own Statistic Code-->"""
-        # Add to just before the html head
-        raw_text = raw_text.replace('</head>', my_statistic_code + '</head>', 1)
-
+    raw_text = raw_text.replace('<html lang="en">\n<head>','<html lang="en">\n<head>\n<script async src="https://www.googletagmanager.com/gtag/js?id=G-7G1X2B0E68"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag(\'js\', new Date());\n  gtag(\'config\', \'G-7G1X2B0E68\');\n</script>')
+    
     return raw_text
 
 
