@@ -36,6 +36,7 @@ external_domains = (
     'www.codeforces.com',
     'codeforces.org',
     'mathjax.codeforces.org',
+    'player.vimeo.com',
 )
 
 # 强制所有 codeforces 站点使用HTTPS
@@ -43,7 +44,7 @@ force_https_domains = 'ALL'
 
 # 自动动态添加域名
 enable_automatic_domains_whitelist = True
-domains_whitelist_auto_add_glob_list = ('*.codeforces.com','*.codeforces.org','*.codeforces.ru','*.wikipedia.org');
+domains_whitelist_auto_add_glob_list = ('*.codeforces.com','*.codeforces.org','*.wikipedia.org','*.codeforces.ru')
 
 # ############## Proxy Settings ##############
 # 如果你在墙内使用本配置文件, 请指定一个墙外的http代理
