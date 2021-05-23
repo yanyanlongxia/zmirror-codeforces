@@ -26,11 +26,11 @@
         </Directory>
         SSLEngine on
 
-        SSLCertificateFile /etc/apache2/cert/cert.pem
+        SSLCertificateFile /etc/apache2/cert/codeforces.live_cert.pem
 
-        SSLCertificateKeyFile /etc/apache2/cert/privkey.pem
+        SSLCertificateKeyFile /etc/apache2/cert/codeforces.live_privkey.pem
 
-        SSLCertificateChainFile /etc/apache2/cert/chain.pem
+        SSLCertificateChainFile /etc/apache2/cert/codeforces.live_chain.pem
 
 
         <IfModule http2_module>
