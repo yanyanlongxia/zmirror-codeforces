@@ -17,6 +17,7 @@
 my_host_name = 'codeforces.live'
 my_host_scheme = 'https://'
 my_host_port = None  # None表示使用默认端口, 可以设置成非标准端口, 比如 81
+verbose_level = 2
 
 # ############## Target Domain Settings ##############
 target_domain = 'codeforces.com'
@@ -34,7 +35,7 @@ external_domains = (
     'm2.codeforces.com',
     'm3.codeforces.com',
     'www.codeforces.com',
-    'codeforces.org',
+#    'codeforces.org',
     'mathjax.codeforces.org',
     'player.vimeo.com',
 )
@@ -44,7 +45,7 @@ force_https_domains = 'ALL'
 
 # 自动动态添加域名
 enable_automatic_domains_whitelist = True
-domains_whitelist_auto_add_glob_list = ('*.codeforces.com','*.codeforces.org','*.wikipedia.org','*.codeforces.ru')
+domains_whitelist_auto_add_glob_list = ('*.codeforces.com','*.codeforces.org','*.wikipedia.org','*.codeforces.ru','*.m.wikipedia.org')
 
 # ############## Proxy Settings ##############
 # 如果你在墙内使用本配置文件, 请指定一个墙外的http代理
