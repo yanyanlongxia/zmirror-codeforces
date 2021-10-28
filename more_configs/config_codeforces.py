@@ -35,7 +35,7 @@ external_domains = (
     'm2.codeforces.com',
     'm3.codeforces.com',
     'www.codeforces.com',
-#    'codeforces.org',
+    'codeforces.org',
     'mathjax.codeforces.org',
     'player.vimeo.com',
 )
