@@ -86,8 +86,6 @@ def custom_response_text_rewriter(raw_text, content_mime, remote_url):
                                 'Copyright 2010-2021 Mike Mirzayanov</div>\n<div>Mirror by <a href="https://yylx.tech/" target="_blank">yanyanlongxia</a></div>')
 
     raw_text = raw_text.replace('</body>\n</html>','<script type="text/javascript" src="//js.users.51.la/21120417.js"></script>\n</body>\n</html>')
-    raw_text = re.sub('//codeforces\.org/s/\d{5}','//codeforces.org/s/10467',raw_text)
-    raw_text = raw_text.replace('//codeforces.org','//cf2-1304562440.cos.ap-nanjing.myqcloud.com')
     
     return raw_text
 
